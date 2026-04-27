@@ -286,7 +286,7 @@ ul { list-style: none; }
 
 .hero-headline {
     font-family: var(--f-body);
-    font-size: clamp(32px, 4vw, 54px);
+    font-size: clamp(26px, 3.2vw, 44px);
     font-weight: 800;
     color: var(--text);
     line-height: 1.15;
@@ -640,6 +640,15 @@ ul { list-style: none; }
     position: relative;
     height: 260px;
     width: 100%;
+}
+
+.chart-disclaimer {
+    font-size: 10px;
+    color: #9ca3af;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: left;
+    line-height: 1.5;
 }
 
 /* Data in Action panel */

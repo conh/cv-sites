@@ -9,15 +9,15 @@ function initBarChart() {
         type: 'bar',
         data: {
             labels: [
-                'GTM Execution',
                 'Storytelling & Messaging',
-                'Cross-Functional Leadership',
-                'EMEA Strategy',
-                'Feature Launch GTM',
-                'Sales Enablement'
+                'GTM Execution',
+                'EMEA Market Ownership',
+                'Voice of Customer',
+                'Sales Enablement',
+                'Data-Driven Decision Making'
             ],
             datasets: [{
-                data: [95, 93, 92, 90, 88, 87],
+                data: [95, 93, 91, 90, 88, 87],
                 backgroundColor: [
                     'rgba(120,86,255,0.85)',
                     'rgba(120,86,255,0.75)',
