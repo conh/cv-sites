@@ -286,10 +286,11 @@ ul { list-style: none; }
 
 .hero-headline {
     font-family: var(--f-body);
-    font-size: clamp(32px, 4vw, 54px);
+    font-size: clamp(26px, 3.2vw, 42px);
     font-weight: 800;
     color: var(--text);
     line-height: 1.15;
+    margin-top: 12px;
 }
 .hero-headline-em {
     color: var(--purple-lt);
