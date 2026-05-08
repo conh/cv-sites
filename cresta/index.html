@@ -80,7 +80,7 @@ img { max-width: 100%; display: block; }
 .hero-inner {
     max-width: 1200px; margin: 0 auto;
     display: grid; grid-template-columns: 1fr 240px;
-    gap: 56px; align-items: flex-start;
+    gap: 56px; align-items: stretch;
     position: relative; z-index: 1;
 }
 .hero-left { display: flex; flex-direction: column; gap: 20px; }
@@ -106,104 +106,87 @@ img { max-width: 100%; display: block; }
 .hero-logos { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 4px; }
 .logos-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark-text-dim); }
 .co-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--dark-text-mid); padding: 4px 12px; border: 1px solid var(--dark-border); border-radius: 3px; background: var(--dark-bg-2); }
-.hero-right { display: flex; flex-direction: column; align-items: center; gap: 14px; padding-top: 8px; }
-.hero-right-logos { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; }
-.hero-right-logos .logos-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark-text-dim); }
-.hero-right-badges { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
-.hero-right-badges .co-badge { font-size: 12px; padding: 4px 10px; }
+.hero-right { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+/* HERO RIGHT — Voice AI Agent art */
+.cresta-art-wrap {
+    position: relative;
+    padding-top: 36px;
+    flex: 1; width: 100%;
+    display: flex; flex-direction: column;
+}
 .hero-photo-wrap {
+    position: absolute; top: 0; left: 14px; z-index: 2;
     width: 72px; height: 72px; border-radius: 50%;
-    border: 2px solid rgba(75,111,255,0.4);
-    box-shadow: 0 0 20px rgba(75,111,255,0.20), 0 8px 24px rgba(0,0,0,0.5);
+    border: 2.5px solid rgba(75,111,255,0.55);
+    box-shadow: 0 0 0 3px #0a0f1a, 0 0 20px rgba(75,111,255,0.3);
     overflow: hidden; flex-shrink: 0;
-    margin-bottom: 2px;
 }
 .hero-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-/* HERO RIGHT — Cresta call transcript art */
 .cresta-art {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
+    flex: 1;
+    background: #0c1220;
+    border: 1px solid rgba(75,111,255,0.18);
+    border-radius: 14px; overflow: hidden;
+    display: flex; flex-direction: column; width: 100%;
 }
-.cresta-art-header {
-    background: #1a2133;
-    padding: 10px 14px;
+.cresta-agent-top {
+    padding: 46px 16px 14px 16px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    display: flex; align-items: center; gap: 8px;
+    display: flex; align-items: center; gap: 10px;
 }
-.cresta-art-wave {
-    color: var(--blue); font-size: 11px; letter-spacing: -1px; line-height: 1;
-}
-.cresta-art-title {
-    font-family: var(--font-head); font-size: 12px; font-weight: 800;
-    letter-spacing: 0.1em; color: rgba(255,255,255,0.85); flex: 1;
-}
-.cresta-art-live {
-    font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
-    color: var(--blue); display: flex; align-items: center; gap: 4px;
-}
-.cresta-art-live-dot {
-    width: 5px; height: 5px; border-radius: 50%;
-    background: var(--blue); animation: pulse 2s infinite;
-}
-.cresta-caller-row {
-    padding: 8px 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    display: flex; align-items: center; gap: 7px;
-}
-.cresta-caller-name {
-    font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.65); flex: 1;
-}
-.cresta-caller-badge {
-    font-size: 8px; font-weight: 800; letter-spacing: 0.08em;
-    padding: 2px 6px; border-radius: 3px;
-    background: rgba(75,111,255,0.15); border: 1px solid rgba(75,111,255,0.3);
-    color: var(--blue);
-}
-.cresta-thread {
-    padding: 10px 14px;
-    display: flex; flex-direction: column; gap: 9px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.cresta-msg { display: flex; flex-direction: column; gap: 3px; }
-.cresta-msg-role {
-    font-size: 8px; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: rgba(255,255,255,0.28);
-}
-.cresta-bubble {
-    background: rgba(255,255,255,0.06);
-    border-radius: 6px; padding: 6px 8px; align-self: flex-start;
-}
-.cresta-bubble--agent {
+.cresta-agent-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
     background: rgba(75,111,255,0.12);
-    border: 1px solid rgba(75,111,255,0.2);
+    border: 1.5px solid rgba(75,111,255,0.35);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.cresta-ghost { height: 6px; background: rgba(255,255,255,0.11); border-radius: 3px; margin-bottom: 4px; }
-.cresta-ghost:last-child { margin-bottom: 0; }
-.cresta-ghost--blue { background: rgba(75,111,255,0.28); }
-.cresta-highlight {
-    font-size: 10px; color: rgba(255,255,255,0.82);
-    background: rgba(75,111,255,0.18); border-radius: 3px;
-    padding: 1px 4px; display: inline;
+.cresta-agent-label {
+    font-family: var(--font-head); font-size: 13px; font-weight: 800;
+    letter-spacing: 0.06em; color: rgba(255,255,255,0.88); margin-bottom: 5px;
 }
-.cresta-ai-panel {
-    margin: 10px 14px 12px;
-    background: rgba(75,111,255,0.07);
-    border: 1px solid rgba(75,111,255,0.3);
-    border-radius: 8px; padding: 10px 12px;
+.cresta-wave-bars { display: flex; align-items: flex-end; gap: 2px; height: 10px; }
+.cresta-wave-bar {
+    width: 2px; border-radius: 1px; background: var(--blue); opacity: 0.75;
+    animation: wave-eq 1.3s ease-in-out infinite;
 }
-.cresta-ai-head {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 10px; font-weight: 700; color: var(--blue);
-    margin-bottom: 8px;
+.cresta-wave-bar:nth-child(1) { height: 4px; animation-delay: 0s; }
+.cresta-wave-bar:nth-child(2) { height: 9px; animation-delay: 0.12s; }
+.cresta-wave-bar:nth-child(3) { height: 6px; animation-delay: 0.24s; }
+.cresta-wave-bar:nth-child(4) { height: 10px; animation-delay: 0.08s; }
+.cresta-wave-bar:nth-child(5) { height: 5px; animation-delay: 0.18s; }
+.cresta-wave-bar:nth-child(6) { height: 8px; animation-delay: 0.04s; }
+.cresta-wave-bar:nth-child(7) { height: 4px; animation-delay: 0.2s; }
+@keyframes wave-eq {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
 }
-.cresta-ai-ghost { height: 6px; background: rgba(75,111,255,0.2); border-radius: 3px; margin-bottom: 5px; }
-.cresta-ai-ghost:last-of-type { margin-bottom: 0; }
-.cresta-ai-source {
-    font-size: 8px; color: rgba(255,255,255,0.28); margin-top: 7px;
+.cresta-message {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    flex: 1;
+}
+.cresta-message p {
+    font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.75;
+}
+.cresta-actions { padding: 12px 16px 16px; }
+.cresta-action-item {
+    display: flex; align-items: center; gap: 9px;
+    padding: 7px 0; font-size: 11px; color: rgba(255,255,255,0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.cresta-action-item:last-child { border-bottom: none; padding-bottom: 0; }
+.cresta-check {
+    width: 17px; height: 17px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 700;
+}
+.cresta-check--done {
+    background: rgba(34,197,94,0.12); border: 1.5px solid #22c55e; color: #22c55e;
+}
+.cresta-check--pending {
+    background: rgba(75,111,255,0.1); border: 1.5px solid rgba(75,111,255,0.3);
+    color: rgba(75,111,255,0.5); font-size: 10px; letter-spacing: -1px;
 }
 .hero-location { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--dark-text-mid); text-align: center; white-space: nowrap; }
 .loc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; animation: pulse 2s infinite; }
@@ -414,50 +397,45 @@ img { max-width: 100%; display: block; }
             </div>
         </div>
         <div class="hero-right">
-            <div class="hero-photo-wrap">
-                <img src="images/con-headshot-032026.jpeg" alt="Con Harbis" class="hero-photo">
-            </div>
-            <!-- Cresta call transcript art -->
-            <div class="cresta-art">
-                <div class="cresta-art-header">
-                    <span class="cresta-art-wave">≋≋≋≋≋</span>
-                    <span class="cresta-art-title">CALL TRANSCRIPT</span>
-                    <span class="cresta-art-live"><span class="cresta-art-live-dot"></span>LIVE</span>
+            <div class="cresta-art-wrap">
+                <div class="hero-photo-wrap">
+                    <img src="images/con-headshot-032026.jpeg" alt="Con Harbis" class="hero-photo">
                 </div>
-                <div class="cresta-caller-row">
-                    <span class="cresta-caller-name">Sarah Chen</span>
-                    <span class="cresta-caller-badge">GOLD MEMBER</span>
-                </div>
-                <div class="cresta-thread">
-                    <div class="cresta-msg">
-                        <span class="cresta-msg-role">Visitor</span>
-                        <div class="cresta-bubble">
-                            <div class="cresta-ghost" style="width:110px"></div>
-                            <div class="cresta-ghost" style="width:80px"></div>
+                <div class="cresta-art">
+                    <div class="cresta-agent-top">
+                        <div class="cresta-agent-avatar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue)"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        </div>
+                        <div>
+                            <div class="cresta-agent-label">Voice AI Agent</div>
+                            <div class="cresta-wave-bars">
+                                <span class="cresta-wave-bar"></span>
+                                <span class="cresta-wave-bar"></span>
+                                <span class="cresta-wave-bar"></span>
+                                <span class="cresta-wave-bar"></span>
+                                <span class="cresta-wave-bar"></span>
+                                <span class="cresta-wave-bar"></span>
+                                <span class="cresta-wave-bar"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="cresta-msg">
-                        <span class="cresta-msg-role">Agent</span>
-                        <div class="cresta-bubble cresta-bubble--agent">
-                            <div class="cresta-ghost cresta-ghost--blue" style="width:100px"></div>
-                            <div class="cresta-ghost cresta-ghost--blue" style="width:70px"></div>
+                    <div class="cresta-message">
+                        <p>I can see your account and current plan details. A mid-term upgrade is available with no change fee. Here's what I've actioned:</p>
+                    </div>
+                    <div class="cresta-actions">
+                        <div class="cresta-action-item">
+                            <span class="cresta-check cresta-check--done">✓</span>
+                            Account details verified
+                        </div>
+                        <div class="cresta-action-item">
+                            <span class="cresta-check cresta-check--done">✓</span>
+                            Upgrade eligibility confirmed
+                        </div>
+                        <div class="cresta-action-item">
+                            <span class="cresta-check cresta-check--pending">···</span>
+                            Processing plan change
                         </div>
                     </div>
-                    <div class="cresta-msg">
-                        <span class="cresta-msg-role">Visitor</span>
-                        <div class="cresta-bubble">
-                            <span class="cresta-highlight">Can I upgrade my plan mid-term?</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cresta-ai-panel">
-                    <div class="cresta-ai-head">
-                        <span>⚡</span> AI generated answer
-                    </div>
-                    <div class="cresta-ai-ghost" style="width:100%"></div>
-                    <div class="cresta-ai-ghost" style="width:88%"></div>
-                    <div class="cresta-ai-ghost" style="width:72%"></div>
-                    <div class="cresta-ai-source">Source: Plan Policies · Was this helpful? 👍</div>
                 </div>
             </div>
             <div class="hero-location">
