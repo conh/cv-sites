@@ -23,12 +23,12 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 :root {
-    --teal:          #00A39C;
-    --teal-on-light: #007A75;
-    --teal-light:    rgba(0,163,156,0.10);
-    --teal-mid:      rgba(0,163,156,0.22);
-    --amber:           #d4891a;
-    --amber-light:     rgba(212,137,26,0.10);
+    --green:          #78BE20;
+    --green-on-light: #78BE20;
+    --green-light:    rgba(120,190,32,0.10);
+    --green-mid:      rgba(120,190,32,0.22);
+    --blue:            #0070C0;
+    --blue-light:      rgba(0,112,192,0.10);
     --dark-bg:         #1B2A3B;
     --dark-bg-2:       #1E3347;
     --dark-bg-3:       #243D55;
@@ -65,7 +65,7 @@ img { max-width: 100%; display: block; }
 .nav-brand { font-family: var(--font-head); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: var(--dark-text); }
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark-text-mid); transition: color 0.2s; }
-.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover { color: var(--green); }
 
 /* HERO */
 .hero {
@@ -75,8 +75,8 @@ img { max-width: 100%; display: block; }
 .hero::before {
     content: ''; position: absolute; inset: 0;
     background-image:
-        linear-gradient(rgba(0,163,156,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,163,156,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(120,190,32,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120,190,32,0.04) 1px, transparent 1px);
     background-size: 48px 48px; pointer-events: none;
 }
 .hero-inner {
@@ -86,10 +86,10 @@ img { max-width: 100%; display: block; }
     position: relative; z-index: 1;
 }
 .hero-left { display: flex; flex-direction: column; gap: 20px; }
-.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
+.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); }
 .hero-name { font-family: var(--font-head); font-size: clamp(2.2rem, 3.8vw, 3.5rem); font-weight: 900; letter-spacing: 0.02em; line-height: 1; color: var(--dark-text); }
 .hero-headline { font-family: var(--font-head); font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 700; line-height: 1.2; color: var(--dark-text); }
-.hero-headline em { font-style: italic; color: var(--teal); font-weight: 700; }
+.hero-headline em { font-style: italic; color: var(--green); font-weight: 700; }
 .hero-sub { font-size: 15px; line-height: 1.75; color: var(--dark-text-mid); max-width: 560px; }
 .hero-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 .hero-btn {
@@ -99,10 +99,10 @@ img { max-width: 100%; display: block; }
     color: var(--dark-text-mid); font-size: 13.5px; font-weight: 500;
     transition: all 0.2s; cursor: pointer; font-family: var(--font-body);
 }
-.hero-btn:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+.hero-btn:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
 .btn-pdf-tag {
-    font-size: 9px; font-weight: 700; letter-spacing: 0.5px; color: var(--teal);
-    background: rgba(0,163,156,0.12); border: 1px solid rgba(0,163,156,0.3);
+    font-size: 9px; font-weight: 700; letter-spacing: 0.5px; color: var(--green);
+    background: rgba(120,190,32,0.12); border: 1px solid rgba(120,190,32,0.3);
     border-radius: 3px; padding: 1px 5px;
 }
 .hero-logos { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 4px; }
@@ -115,34 +115,34 @@ img { max-width: 100%; display: block; }
 .hero-right-badges .co-badge { font-size: 12px; padding: 4px 10px; }
 .hero-photo-wrap {
     width: 172px; height: 172px; border-radius: 50%;
-    border: 2px solid rgba(0,163,156,0.35);
-    box-shadow: 0 0 40px rgba(0,163,156,0.10), 0 16px 40px rgba(0,0,0,0.5);
+    border: 2px solid rgba(120,190,32,0.35);
+    box-shadow: 0 0 40px rgba(120,190,32,0.10), 0 16px 40px rgba(0,0,0,0.5);
     overflow: hidden; flex-shrink: 0;
 }
 .hero-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-location { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--dark-text-mid); text-align: center; white-space: nowrap; }
-.loc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; animation: pulse 2s infinite; margin-right: 0; }
+.loc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: pulse 2s infinite; margin-right: 0; }
 
 /* SHARED SECTION */
 .section-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
-.section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-on-light); margin-bottom: 1.25rem; }
+.section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-on-light); margin-bottom: 1.25rem; }
 .section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; line-height: 1.15; color: var(--light-text); margin-bottom: 3rem; }
 .section-title-dark { color: var(--dark-text); }
-.accent-yellow { color: var(--teal-on-light); }
-.accent-amber { color: var(--amber); }
+.accent-yellow { color: var(--green-on-light); }
+.accent-amber { color: var(--blue); }
 
 /* WHAT I DO */
 .pillars { background: var(--light-bg-2); border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
 .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 .pillar-card { background: var(--light-bg); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
-.pillar-card:hover { border-color: var(--teal-on-light); box-shadow: 0 4px 16px rgba(0,122,117,0.08); }
-.pillar-icon { color: var(--teal-on-light); margin-bottom: 1rem; }
+.pillar-card:hover { border-color: var(--green-on-light); box-shadow: 0 4px 16px rgba(120,190,32,0.08); }
+.pillar-icon { color: var(--green-on-light); margin-bottom: 1rem; }
 .pillar-card h3 { font-size: 1rem; font-weight: 700; color: var(--light-text); margin-bottom: 0.5rem; }
 .pillar-card p { font-size: 0.875rem; color: var(--light-text-mid); line-height: 1.65; }
 
 /* WHY WORKIVA */
 .why-teya { background: var(--dark-bg-2); }
-.why-teya .section-label { color: var(--teal); }
+.why-teya .section-label { color: var(--green); }
 .why-teya .section-title { color: var(--dark-text); margin-bottom: 2rem; }
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .why-card {
@@ -150,21 +150,21 @@ img { max-width: 100%; display: block; }
     border-radius: 8px; padding: 1.5rem;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
-.why-card:hover { border-color: rgba(0,163,156,0.3); box-shadow: 0 4px 16px rgba(0,163,156,0.06); }
+.why-card:hover { border-color: rgba(120,190,32,0.3); box-shadow: 0 4px 16px rgba(120,190,32,0.06); }
 .why-card-label {
     font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--teal); margin-bottom: 0.75rem;
+    color: var(--green); margin-bottom: 0.75rem;
 }
 .why-card p { font-size: 0.875rem; color: var(--dark-text-mid); line-height: 1.65; }
 .why-card strong { color: var(--dark-text); font-weight: 600; }
 
 /* STATS — dark, 6 col */
 .stats { background: var(--dark-bg-2); }
-.stats .section-label { color: var(--teal); }
+.stats .section-label { color: var(--green); }
 .stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
 .stat-card { background: var(--dark-bg-3); border: 1px solid var(--dark-border); border-radius: 8px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s; }
-.stat-card:hover { border-color: var(--teal); }
-.stat-num { font-family: var(--font-head); font-size: 2.4rem; font-weight: 900; color: var(--teal); line-height: 1; margin-bottom: 0.4rem; }
+.stat-card:hover { border-color: var(--green); }
+.stat-num { font-family: var(--font-head); font-size: 2.4rem; font-weight: 900; color: var(--green); line-height: 1; margin-bottom: 0.4rem; }
 .stat-suffix { font-size: 1.6rem; }
 .stat-label { font-size: 0.8rem; font-weight: 700; color: var(--dark-text); margin-bottom: 0.2rem; line-height: 1.3; }
 .stat-sub { font-size: 0.7rem; color: var(--dark-text-dim); line-height: 1.4; }
@@ -175,30 +175,30 @@ img { max-width: 100%; display: block; }
 .skills-col-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--light-text-dim); padding-bottom: 0.75rem; border-bottom: 1px solid var(--light-border); margin-bottom: 0.25rem; }
 .spec-row { display: grid; grid-template-columns: 56px 1fr 100px; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--light-border); }
 .spec-row:last-child { border-bottom: none; }
-.spec-code { font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--teal-on-light); }
+.spec-code { font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--green-on-light); }
 .spec-name { font-size: 13px; font-weight: 500; color: var(--light-text); }
-.spec-track { height: 5px; background: rgba(0,122,117,0.12); border-radius: 3px; overflow: hidden; }
-.spec-bar { display: block; height: 100%; width: var(--w, 80%); background: linear-gradient(90deg, #007A75, #00A39C); border-radius: 3px; }
+.spec-track { height: 5px; background: rgba(120,190,32,0.12); border-radius: 3px; overflow: hidden; }
+.spec-bar { display: block; height: 100%; width: var(--w, 80%); background: #78BE20; border-radius: 3px; }
 
 /* Data in action */
 .dia-list { display: flex; flex-direction: column; gap: 0; }
 .dia-item { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--light-border); }
 .dia-item:last-child { border-bottom: none; }
-.dia-metric { font-family: var(--font-head); font-size: 1.4rem; font-weight: 900; color: var(--teal-on-light); line-height: 1.1; padding-top: 2px; }
+.dia-metric { font-family: var(--font-head); font-size: 1.4rem; font-weight: 900; color: var(--green-on-light); line-height: 1.1; padding-top: 2px; }
 .dia-title { font-size: 13px; font-weight: 700; color: var(--light-text); margin-bottom: 4px; }
 .dia-desc { font-size: 12.5px; color: var(--light-text-mid); line-height: 1.6; }
 
 /* PROFESSIONAL SUMMARY */
 .summary { background: var(--light-bg-2); border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
 .summary-layout { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: start; }
-.big-quote { font-family: Georgia, serif; font-size: 96px; line-height: 0.8; color: rgba(0,122,117,0.15); margin-bottom: 8px; }
+.big-quote { font-family: Georgia, serif; font-size: 96px; line-height: 0.8; color: rgba(120,190,32,0.15); margin-bottom: 8px; }
 .summary-p { font-size: 14.5px; color: var(--light-text-mid); line-height: 1.8; margin-bottom: 18px; }
 .summary-p:last-child { margin-bottom: 0; }
-.verdict-card { background: var(--light-bg); border: 1px solid rgba(0,122,117,0.25); border-radius: 12px; padding: 1.5rem; position: sticky; top: 80px; }
-.verdict-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-on-light); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--light-border); }
+.verdict-card { background: var(--light-bg); border: 1px solid rgba(120,190,32,0.25); border-radius: 12px; padding: 1.5rem; position: sticky; top: 80px; }
+.verdict-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-on-light); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--light-border); }
 .verdict-item { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--light-border); font-size: 13px; color: var(--light-text-mid); line-height: 1.5; }
 .verdict-item:last-child { border-bottom: none; }
-.verdict-tick { color: var(--teal-on-light); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+.verdict-tick { color: var(--green-on-light); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
 /* CAREER */
 .career { background: var(--light-bg); }
@@ -207,11 +207,11 @@ img { max-width: 100%; display: block; }
 .tl-item:last-child { padding-bottom: 0; }
 .tl-item::before { content: ''; position: absolute; left: 8px; top: 24px; bottom: 0; width: 1px; background: var(--light-border); }
 .tl-item:last-child::before { display: none; }
-.tl-marker { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--teal-on-light); background: var(--light-bg); margin-top: 4px; flex-shrink: 0; position: relative; z-index: 1; }
+.tl-marker { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--green-on-light); background: var(--light-bg); margin-top: 4px; flex-shrink: 0; position: relative; z-index: 1; }
 .tl-content { background: var(--light-bg-2); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.5rem; transition: border-color 0.2s, box-shadow 0.2s; }
-.tl-content:hover { border-color: var(--teal-on-light); box-shadow: 0 4px 16px rgba(0,122,117,0.07); }
+.tl-content:hover { border-color: var(--green-on-light); box-shadow: 0 4px 16px rgba(120,190,32,0.07); }
 .tl-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.5rem; }
-.tl-company { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: var(--teal-on-light); letter-spacing: 0.02em; }
+.tl-company { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: var(--green-on-light); letter-spacing: 0.02em; }
 .tl-period { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: var(--light-text-dim); font-variant-numeric: tabular-nums; }
 .tl-role { font-size: 0.9rem; font-weight: 600; color: var(--light-text); margin-bottom: 0.75rem; }
 .tl-desc { font-size: 0.875rem; color: var(--light-text-mid); line-height: 1.65; margin-bottom: 1rem; }
@@ -226,32 +226,32 @@ img { max-width: 100%; display: block; }
 .highlights { background: var(--light-bg-2); border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
 .hl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .hl-card { background: var(--light-bg); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
-.hl-card:hover { border-color: var(--amber); box-shadow: 0 4px 16px rgba(212,137,26,0.08); }
-.hl-metric { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem; }
+.hl-card:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(0,112,192,0.08); }
+.hl-metric { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
 .hl-card h3 { font-size: 1rem; font-weight: 700; color: var(--light-text); margin-bottom: 0.5rem; line-height: 1.4; }
 .hl-card p { font-size: 0.85rem; color: var(--light-text-mid); line-height: 1.65; }
 
 /* PERSONAL BACKGROUND — dark two cards */
 .personal { background: var(--dark-bg-2); }
-.personal .section-label { color: var(--teal); }
+.personal .section-label { color: var(--green); }
 .personal .section-title { color: var(--dark-text); }
 .personal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .personal-card { background: var(--dark-bg-3); border: 1px solid var(--dark-border); border-radius: 8px; padding: 2rem; transition: border-color 0.2s; }
-.personal-card:hover { border-color: rgba(0,163,156,0.3); }
+.personal-card:hover { border-color: rgba(120,190,32,0.3); }
 .personal-card-icon { margin-bottom: 1rem; }
-.personal-card h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 800; color: var(--teal); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.personal-card h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 800; color: var(--green); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.75rem; }
 .personal-card p { font-size: 0.9rem; color: var(--dark-text-mid); line-height: 1.7; }
 .personal-card p + p { margin-top: 0.75rem; }
 
 /* FOOTER */
 .cta-footer { background: var(--dark-bg); border-top: 1px solid var(--dark-border); }
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
-.footer-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.25rem; }
+.footer-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 1.25rem; }
 .footer-name { font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; letter-spacing: 0.06em; color: var(--dark-text); margin-bottom: 0.5rem; }
 .footer-tagline { font-size: 1rem; color: var(--dark-text-mid); margin-bottom: 2.5rem; }
 .contact-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 .contact-chip { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; background: rgba(255,255,255,0.04); color: var(--dark-text-mid); font-size: 13.5px; font-weight: 500; transition: all 0.2s; cursor: pointer; font-family: var(--font-body); }
-.contact-chip:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+.contact-chip:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -388,27 +388,27 @@ img { max-width: 100%; display: block; }
         <div class="why-grid">
             <div class="why-card">
                 <div class="why-card-label">COMPLIANCE-HEAVY, TRUST-DEPENDENT PRODUCTS</div>
-                <p>Payroll is a product people are scared to get wrong. Xero's buyers, small business owners and their accountants, needed to trust the platform completely before they'd move their payroll to it. Getting that trust required accurate positioning, clear education on what the product actually did, and a GTM approach that reduced perceived risk. Workiva's buyers are larger and the regulatory stakes are higher, but the dynamic is the same. I know how to position products where the cost of being wrong is high and trust has to be earned before the sale.</p>
+                <p>Payroll is a product businesses are scared to get wrong. At Xero, getting that trust required accurate positioning, clear education on what the product actually did, and a GTM approach that reduced perceived risk. I know how to position products where the cost of being wrong is high and trust has to be earned before the sale.</p>
             </div>
             <div class="why-card">
-                <div class="why-card-label">MULTI-MARKET GTM ACROSS EMEA-EQUIVALENT SCOPE</div>
+                <div class="why-card-label">MULTI-MARKET GTM</div>
                 <p>I've owned GTM strategy across UK, Australia, and New Zealand simultaneously, building region-specific segmentation and adapting positioning to local market dynamics, competitive sets, and buyer behaviours. That's the same discipline Workiva needs across EMEA. Markets have different maturity levels and different entry priorities. Getting that right requires more than translating messaging.</p>
             </div>
             <div class="why-card">
                 <div class="why-card-label">MARKET STRATEGY AND INVESTMENT CASES</div>
-                <p>I led UK market segmentation and ICP development, modelling opportunity by segment to inform annual GTM strategy and product investment priorities. I also led the competitive and market analysis that informed Xero's Canadian market entry build/buy/partner evaluation. That discipline maps directly to what this role requires: sizing markets across EMEA, prioritising countries, and translating regulatory and competitive intelligence into investment recommendations. EMEA's regulatory environment is as varied as Xero's three-market payroll landscape, just at larger scale.</p>
+                <p>I led UK market segmentation and ICP development, modelling opportunity by segment to inform annual GTM strategy and product investment priorities. I also led the competitive and market analysis that informed Xero's Canadian market entry build/buy/partner evaluation. That discipline maps directly to what this role requires: sizing markets across EMEA, prioritising countries, and translating regulatory and competitive intelligence into investment recommendations.</p>
             </div>
             <div class="why-card">
                 <div class="why-card-label">BUILDING FROM FIRST-PMM FOUNDATIONS</div>
-                <p>I came in as the first PMM for Xero Payroll globally. I built the positioning, messaging frameworks, GTM playbooks, and sales enablement that helped drive 154% revenue growth across a $400M+ portfolio. Workiva needs a Director who can define the EMEA market strategy and bring cross-functional alignment behind it. That's work I've done without a blueprint.</p>
+                <p>I came in as the first PMM for Xero Payroll globally. I built the positioning, messaging frameworks, GTM playbooks, and sales enablement that helped drive 154% revenue growth across a $400M+ portfolio. Workiva needs a Director who can define the EMEA market strategy and bring cross-functional alignment behind it. That's work I've done.</p>
             </div>
             <div class="why-card">
                 <div class="why-card-label">REGIONAL INTELLIGENCE INTO GLOBAL PRODUCT DIRECTION</div>
-                <p>At Xero I sat on the Payroll leadership team alongside PMs and Engineers. Part of my job was feeding UK and EMEA market intelligence back into the global product roadmap, shaping what got prioritised and how features were sequenced across regions. Workiva describes exactly this dynamic: the EMEA Director providing market input on product roadmaps and regional requirements. That's a mode of working I've operated in, not one I'm adapting to.</p>
+                <p>At Xero I sat on the Payroll leadership team alongside PMs and Engineers. Part of that role was making sure regional market needs were understood and prioritised by the product team, translating what businesses in a specific market required into something the team could act on. That's the dynamic Workiva is describing, and it's one I've worked in for years.</p>
             </div>
             <div class="why-card">
                 <div class="why-card-label">AI AS A WORKING TOOL</div>
-                <p>I've been building with AI tools, actively optimising how I work, and applying them to projects outside my day job. For strategy work that means moving from a market question to a structured recommendation faster, running competitive analysis more thoroughly, and pressure-testing positioning before it goes anywhere near a brief. It's become part of how I work, not a side interest.</p>
+                <p>I've been building with AI tools, actively optimising how I work, and applying them to projects outside my day job. For strategy work that means moving from a market question to a structured recommendation faster, running competitive analysis more thoroughly. It's become part of how I work, not a side interest.</p>
             </div>
             <div class="why-card">
                 <div class="why-card-label">LONDON-BASED</div>
@@ -688,7 +688,7 @@ img { max-width: 100%; display: block; }
         <div class="personal-grid">
             <div class="personal-card">
                 <div class="personal-card-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--teal)"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="17" width="20" height="5" rx="1"/></svg>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="17" width="20" height="5" rx="1"/></svg>
                 </div>
                 <h3>Product Marketing Leader</h3>
                 <p>15+ years across product, commercial, and customer. Before moving into product marketing I spent years as a Senior Product Manager at Carsales, and then at Xero as Product Manager for NZ Payroll. It changes how I work with product teams and how I think about what the market actually needs before we build anything.</p>
@@ -696,7 +696,7 @@ img { max-width: 100%; display: block; }
             </div>
             <div class="personal-card">
                 <div class="personal-card-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--teal)"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
                 </div>
                 <h3>Founder &amp; Director, The Football Practice</h3>
                 <p>I founded and ran The Football Practice, a youth football coaching business, for three years alongside a full-time senior role at Xero. Built it from nothing: brand, curriculum, operations, customer experience. Scaled to 50+ players across five weekly sessions before closing by choice.</p>
