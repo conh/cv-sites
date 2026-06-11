@@ -279,7 +279,7 @@ ul { list-style: none; }
 
 .hero-headline {
     font-family: var(--f-body);
-    font-size: clamp(26px, 3.2vw, 44px);
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
     font-weight: 800;
     color: var(--text);
     line-height: 1.15;
