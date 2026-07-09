@@ -23,17 +23,17 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 :root {
-    --accent:          #2EBD7A;
+    --accent:          #E1DFDB;
     --accent-on-light: #005230;
     --accent-light:    rgba(0,82,48,0.10);
     --accent-mid:      rgba(0,82,48,0.22);
-    --dark-bg:         #050C07;
-    --dark-bg-2:       #081209;
-    --dark-bg-3:       #0D1B0F;
-    --dark-border:     rgba(255,255,255,0.07);
-    --dark-text:       #EDF2EC;
-    --dark-text-mid:   #88A088;
-    --dark-text-dim:   #485A48;
+    --dark-bg:         #002518;
+    --dark-bg-2:       #003220;
+    --dark-bg-3:       #003E28;
+    --dark-border:     rgba(255,255,255,0.10);
+    --dark-text:       #F3F2EE;
+    --dark-text-mid:   #B0ACA4;
+    --dark-text-dim:   #687060;
     --light-bg:        #F3F2EE;
     --light-bg-2:      #FFFFFF;
     --light-border:    rgba(0,82,48,0.12);
@@ -51,7 +51,7 @@ img { max-width: 100%; display: block; }
 /* NAV */
 .site-nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(5,12,7,0.96);
+    background: rgba(0,37,24,0.97);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--dark-border);
 }
@@ -73,8 +73,8 @@ img { max-width: 100%; display: block; }
 .hero::before {
     content: ''; position: absolute; inset: 0;
     background-image:
-        linear-gradient(rgba(0,82,48,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,82,48,0.06) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
     background-size: 48px 48px; pointer-events: none;
 }
 .hero-inner {
@@ -100,7 +100,7 @@ img { max-width: 100%; display: block; }
 .hero-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
 .btn-pdf-tag {
     font-size: 9px; font-weight: 700; letter-spacing: 0.5px; color: var(--accent);
-    background: rgba(0,82,48,0.12); border: 1px solid rgba(46,189,122,0.35);
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(225,223,219,0.35);
     border-radius: 3px; padding: 1px 5px;
 }
 .co-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--dark-text-mid); padding: 4px 12px; border: 1px solid var(--dark-border); border-radius: 3px; background: var(--dark-bg-2); }
@@ -112,8 +112,8 @@ img { max-width: 100%; display: block; }
 .hero-right-badges .co-badge { font-size: 12px; padding: 4px 10px; }
 .hero-photo-wrap {
     width: 172px; height: 172px; border-radius: 50%;
-    border: 2px solid rgba(46,189,122,0.4);
-    box-shadow: 0 0 40px rgba(0,82,48,0.15), 0 16px 40px rgba(0,0,0,0.5);
+    border: 2px solid rgba(225,223,219,0.4);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3), 0 16px 40px rgba(0,0,0,0.5);
     overflow: hidden; flex-shrink: 0;
 }
 .hero-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -147,7 +147,7 @@ img { max-width: 100%; display: block; }
     border-radius: 8px; padding: 1.5rem;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
-.why-card:hover { border-color: rgba(46,189,122,0.3); box-shadow: 0 4px 16px rgba(0,82,48,0.08); }
+.why-card:hover { border-color: rgba(225,223,219,0.3); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
 .why-card-label {
     font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 0.75rem;
