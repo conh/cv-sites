@@ -130,6 +130,46 @@ img { max-width: 100%; display: block; }
 .accent-teal   { color: var(--teal); }
 .accent-indigo { color: var(--accent-on-light); }
 
+/* TEAL HERO OVERRIDE */
+.hero { background: var(--accent); }
+.hero::before {
+    background-image:
+        linear-gradient(rgba(10,122,94,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10,122,94,0.07) 1px, transparent 1px);
+}
+.hero .hero-eyebrow { color: #0C2018; }
+.hero .hero-name    { color: #081410; }
+.hero .hero-headline { color: #081410; }
+.hero .hero-headline em { color: #0C2018; }
+.hero .hero-sub     { color: #1E3A28; }
+.hero .hero-btn {
+    border-color: rgba(12,32,24,0.30);
+    background:   rgba(12,32,24,0.08);
+    color: #0C2018;
+}
+.hero .hero-btn:hover {
+    border-color: #0C2018;
+    background:   #0C2018;
+    color: var(--accent);
+}
+.hero .btn-pdf-tag {
+    color: #0C2018;
+    background: rgba(12,32,24,0.10);
+    border-color: rgba(12,32,24,0.30);
+}
+.hero .co-badge {
+    color: #0C2018;
+    border-color: rgba(12,32,24,0.20);
+    background: rgba(12,32,24,0.08);
+}
+.hero .logos-label  { color: rgba(12,32,24,0.55); }
+.hero .hero-location { color: #1E3A28; }
+.hero .loc-dot      { background: #0C2018; }
+.hero .hero-photo-wrap {
+    border-color: rgba(12,32,24,0.40);
+    box-shadow: 0 0 40px rgba(12,32,24,0.10), 0 16px 40px rgba(0,0,0,0.15);
+}
+
 /* WHAT I DO */
 .pillars { background: var(--light-bg-2); border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
 .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
