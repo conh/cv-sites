@@ -274,7 +274,7 @@
 
         /* How it works */
         /* Pillars */
-        .pillars { background: var(--green); color: var(--white); padding-top: 0; }
+        .pillars { background: var(--cream); color: var(--green); }
         .pillars-intro {
             text-align: center;
             font-size: clamp(22px, 3.6vw, 30px);
@@ -290,21 +290,52 @@
         @media (min-width: 640px) { .pillar-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1000px) { .pillar-grid { grid-template-columns: repeat(4, 1fr); } }
         .pillar {
-            background: var(--cream);
-            color: var(--green);
+            background: var(--green);
+            color: var(--white);
             border-radius: var(--radius);
             padding: 24px;
         }
         .pillar h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-        .pillar p { font-size: 15px; color: var(--muted-light); }
+        .pillar p { font-size: 15px; color: var(--muted-dark); }
+
+        /* J.P. Morgan partner band: modelled on Payhawk's J.P. Morgan Payments press image */
+        .partner { background: var(--white); }
+        .partner-grid { display: grid; gap: 32px; align-items: center; }
+        @media (min-width: 900px) { .partner-grid { grid-template-columns: 1fr 1.15fr; gap: 64px; } }
+        .partner .body { margin-top: 16px; font-size: 18px; color: var(--muted-light); }
+        .partner .body strong { color: var(--green); font-weight: 600; }
+        .lockup-card {
+            aspect-ratio: 1.56;
+            border-radius: 20px;
+            background: radial-gradient(60% 60% at 50% 50%, #0b5242 0%, #0a3b34 55%, #0a2b29 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(16px, 4vw, 32px);
+            padding: 24px;
+            color: var(--white);
+        }
+        .lockup-payhawk { height: clamp(26px, 5vw, 40px); width: auto; flex-shrink: 0; }
+        .lockup-divider { width: 1.5px; align-self: center; height: clamp(56px, 11vw, 92px); background: rgba(255, 255, 255, 0.85); }
+        .lockup-jpm { display: flex; flex-direction: column; gap: 6px; }
+        .lockup-jpm .name {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: clamp(24px, 4.6vw, 38px);
+            line-height: 1;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+        }
+        .lockup-jpm .fund { font-size: clamp(9px, 1.4vw, 12px); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.35; }
+
+        .product { font-weight: 700; }
 
         /* Same platform */
-        .platform { background: var(--cream); }
+        .platform { background: var(--white); }
         .platform-grid { display: grid; gap: 20px; }
         @media (min-width: 900px) { .platform-grid { grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; } }
         .platform .body { font-size: 18px; color: var(--muted-light); }
 
-        .how { background: var(--white); }
+        .how { background: var(--cream); }
         .how .eyebrow { color: var(--green-3); }
         .steps {
             list-style: none;
@@ -318,7 +349,7 @@
         @media (min-width: 1000px) { .steps { grid-template-columns: repeat(4, 1fr); } }
         .step {
             counter-increment: step;
-            background: var(--cream);
+            background: var(--white);
             border-radius: var(--radius);
             padding: 24px;
         }
@@ -533,7 +564,7 @@
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                     <div class="video-meta">
-                        <span>A word from the team behind Treasury</span>
+                        <span>A word from the team behind <strong class="product">Treasury</strong></span>
                         <span class="duration">90 sec</span>
                     </div>
                 </div>
@@ -569,7 +600,7 @@
         <section class="platform">
             <div class="wrap platform-grid">
                 <h2 class="section-title">Same platform. One more thing it does.</h2>
-                <p class="body">Treasury isn't a separate product bolted onto your account. It's the same platform you already use for cards, expenses and multi-entity management, now able to put your excess cash to work too.</p>
+                <p class="body"><strong class="product">Treasury</strong> isn't a separate product bolted onto your account. It's the same platform you already use for cards, expenses and multi-entity management, now able to put your excess cash to work too.</p>
             </div>
         </section>
 
@@ -580,11 +611,11 @@
                 <ol class="steps">
                     <li class="step">
                         <h3>Turn it on.</h3>
-                        <p>Enable Treasury for your eligible entity, the same way you switch on any other Payhawk module.</p>
+                        <p>Enable <strong class="product">Treasury</strong> for your eligible entity, the same way you switch on any other Payhawk module.</p>
                     </li>
                     <li class="step">
                         <h3>Choose an amount.</h3>
-                        <p>Move as much of your excess cash into Treasury as you want, directly from your existing balance.</p>
+                        <p>Move as much of your excess cash into <strong class="product">Treasury</strong> as you want, directly from your existing balance.</p>
                     </li>
                     <li class="step">
                         <h3>It earns.</h3>
@@ -598,6 +629,24 @@
             </div>
         </section>
 
+        <!-- J.P. Morgan partner band -->
+        <section class="partner">
+            <div class="wrap partner-grid">
+                <div>
+                    <h2 class="section-title">Invested with J.P. Morgan.</h2>
+                    <p class="body"><strong class="product">Treasury</strong> balances are invested in the <strong>JPMorgan Liquidity Funds GBP Liquidity LVNAV Fund</strong>, a sterling money market fund managed by J.P. Morgan Asset Management. The same partner behind your Payhawk account today.</p>
+                </div>
+                <div class="lockup-card" role="img" aria-label="Payhawk and J.P. Morgan GBP Liquidity LVNAV Fund">
+                    <svg class="lockup-payhawk" viewBox="133 132 1031 236" fill="currentColor" aria-hidden="true"><path d="M218.364 132.701H133.141V179.849C133.141 197.337 147.322 211.518 164.81 211.518V159.478H211.67C232.783 159.478 244.111 170.292 244.111 189.087C244.111 210.972 229.95 218.954 211.67 218.954H164.81C147.322 218.954 133.141 233.136 133.141 250.623V316.536H164.81V245.742H218.364C255.698 245.742 276.038 222.569 276.038 189.098C276.038 155.626 255.708 132.701 218.364 132.701Z"/><path d="M283.656 278.698C283.656 254.753 302.709 242.652 335.666 239.82C363.215 237.76 374.04 234.67 374.04 223.084C374.04 210.725 362.968 203.516 347.52 203.516C330.527 203.516 318.94 209.953 317.91 226.689H289.331C289.331 201.456 312.761 180.086 347.52 180.086C378.674 180.086 403.134 194.762 403.134 227.461V293.374H413.948V316.547H392.835C383.566 316.547 375.842 309.337 375.842 300.068V296.464H375.069C363.998 311.655 347.005 319.894 328.724 319.894C301.432 319.894 283.656 304.188 283.656 278.698ZM335.666 296.464C354.976 296.464 374.287 283.075 374.287 258.358V250.119C366.563 255.783 354.461 257.843 341.588 259.13C323.307 261.19 313.523 267.112 313.523 278.698C313.523 290.284 323.307 296.464 335.666 296.464Z"/><path d="M425.805 343.066H456.187L466.486 316.804L414.219 183.423H444.858L479.874 282.292H480.647L515.663 183.423H546.045L479.102 353.108C475.755 361.604 467.001 367.526 457.732 367.526H425.805V343.066Z"/><path d="M587.001 204.021H587.773C595.497 187.285 612.49 180.076 629.484 180.076C663.728 180.076 675.314 200.159 675.314 228.481V316.536H646.219V230.025C646.219 214.835 637.723 204.793 622.274 204.793C598.844 204.793 587.001 222.301 587.001 244.701V316.547H557.906V132.701H587.001V204.021Z"/><path d="M695.406 278.698C695.406 254.753 714.459 242.652 747.416 239.82C774.965 237.76 785.79 234.67 785.79 223.084C785.79 210.725 774.718 203.516 759.27 203.516C742.277 203.516 730.69 209.953 729.66 226.689H701.081C701.081 201.456 724.511 180.086 759.27 180.086C790.424 180.086 814.884 194.762 814.884 227.461V293.374H825.698V316.547H804.585C795.316 316.547 787.592 309.337 787.592 300.068V296.464H786.819C775.748 311.655 758.755 319.894 740.474 319.894C713.182 319.894 695.406 304.188 695.406 278.698ZM747.416 296.464C766.726 296.464 786.037 283.075 786.037 258.358V250.119C778.313 255.783 766.211 257.843 753.338 259.13C735.057 261.19 725.273 267.112 725.273 278.698C725.273 290.284 735.057 296.464 747.416 296.464Z"/><path d="M827.516 183.423H858.67L886.477 285.907H887.249L912.997 183.423H940.804L966.551 285.907H967.323L995.13 183.423H1026.54L984.317 316.547H951.36L927.415 222.301H926.643L902.44 316.547H869.484L827.516 183.423Z"/><path d="M1038.41 132.701H1067.5V249.604L1126.46 183.423H1161.48L1107.92 240.582L1163.02 316.536H1129.04L1090.16 259.892L1067.5 284.095V316.536H1038.41V132.701Z"/></svg>
+                    <span class="lockup-divider" aria-hidden="true"></span>
+                    <div class="lockup-jpm" aria-hidden="true">
+                        <span class="name">J.P.Morgan</span>
+                        <span class="fund">GBP Liquidity<br>LVNAV Fund</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Commercial model -->
         <section class="commercial on-light">
             <div class="wrap commercial-grid">
@@ -605,7 +654,7 @@
                     <span class="eyebrow">Pricing</span>
                     <h2 class="section-title">One rate, for everyone with access.</h2>
                 </div>
-                <p class="body">Treasury runs on a flat, disclosed margin, the same for every customer, not tiered by plan. It's available as an add-on alongside Additional entities, the same way multi-entity management is today. <strong>During early access, the margin is waived in full.</strong></p>
+                <p class="body"><strong class="product">Treasury</strong> runs on a flat, disclosed margin, the same for every customer, not tiered by plan. It's available as an add-on alongside Additional entities, the same way multi-entity management is today. <strong>During early access, the margin is waived in full.</strong></p>
             </div>
         </section>
 
@@ -618,7 +667,7 @@
                     <div class="earnings" aria-live="polite">
                         <div class="earnings-label">Estimated annual return</div>
                         <div class="earnings-value" id="annual">£190,000</div>
-                        <p class="earnings-basis">on <strong id="basis-balance">£5,000,000</strong> held in Treasury at a <strong class="rate">3.8%*</strong> indicative rate</p>
+                        <p class="earnings-basis">on <strong id="basis-balance">£5,000,000</strong> held in <strong class="product">Treasury</strong> at a <strong class="rate">3.8%*</strong> indicative rate</p>
                     </div>
 
                     <div class="calc-label">
@@ -653,7 +702,7 @@
                     </details>
                     <details>
                         <summary>How do I move money in and out?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></span></summary>
-                        <p class="answer">From your Treasury module, move any amount from your operating balance in, and move it back the same day, whenever you need it.</p>
+                        <p class="answer">From your <strong class="product">Treasury</strong> module, move any amount from your operating balance in, and move it back the same day, whenever you need it.</p>
                     </details>
                     <details>
                         <summary>How fast can I get funds back?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></span></summary>
@@ -661,7 +710,7 @@
                     </details>
                     <details>
                         <summary>Is this like a bank deposit?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></span></summary>
-                        <p class="answer">No. Treasury is a money market fund, not a deposit account, so it isn't FSCS-covered the same way.</p>
+                        <p class="answer">No. <strong class="product">Treasury</strong> is a money market fund, not a deposit account, so it isn't FSCS-covered the same way.</p>
                     </details>
                     <details>
                         <summary>What happens to the fee after early access?<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></span></summary>
@@ -688,7 +737,7 @@
     </main>
 
     <footer>
-        <div class="wrap"><p>*Indicative rate, net of Payhawk's standard margin. Waived for all customers during early access.</p><p style="margin-top:8px">Payhawk Treasury early access. Indicative figures only. Treasury is a money market fund, not a deposit account.</p></div>
+        <div class="wrap"><p>*Indicative rate, net of Payhawk's standard margin. Waived for all customers during early access.</p><p style="margin-top:8px">Payhawk <strong class="product">Treasury</strong> early access. Indicative figures only. <strong class="product">Treasury</strong> is a money market fund, not a deposit account.</p></div>
     </footer>
 
     <script>
