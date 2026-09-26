@@ -132,21 +132,23 @@
         @media (min-width: 768px) { .hero { padding-top: 64px; } }
         .hero-grid { display: grid; }
         .hero-grid > * { min-width: 0; }
-        .hero-grid .badge { justify-self: start; }
+        .hero-intro { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 24px; }
+        .hero-intro .badge { margin-bottom: 0; }
+        .first-line { font-size: 15px; color: var(--muted-dark); }
         .hero-grid .video-card { margin-top: 40px; }
         @media (min-width: 900px) {
             .hero-grid {
                 grid-template-columns: 1.05fr 1fr;
                 column-gap: 56px;
                 grid-template-areas:
-                    "badge   ."
+                    "badge   badge"
                     "head    video"
                     "sub     video"
                     "stats   stats"
                     "actions ."
                     "trust   .";
             }
-            .hero-grid .badge { grid-area: badge; }
+            .hero-grid .hero-intro { grid-area: badge; }
             .hero-grid h1 { grid-area: head; }
             .hero-grid .sub { grid-area: sub; }
             .hero-grid .stats { grid-area: stats; }
@@ -540,7 +542,10 @@
         <!-- Hero -->
         <section class="hero">
             <div class="wrap hero-grid">
-                    <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Early access <span class="sep" aria-hidden="true">·</span> <span class="region">UK entities</span></span>
+                    <div class="hero-intro">
+                        <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Early access <span class="sep" aria-hidden="true">·</span> <span class="region">UK entities</span></span>
+                        <p class="first-line">You're one of the first Payhawk customers getting access.</p>
+                    </div>
                     <h1>Treasury. <em>Your excess cash, now earning.</em></h1>
                     <p class="sub">No lock-in period, no notice period. Get it back the same day, not the next one.</p>
                     <ul class="stats">
@@ -654,7 +659,7 @@
                     <span class="eyebrow">Pricing</span>
                     <h2 class="section-title">One rate, for everyone with access.</h2>
                 </div>
-                <p class="body"><strong class="product">Treasury</strong> runs on a flat, disclosed margin, the same for every customer, not tiered by plan. It's available as an add-on alongside Additional entities, the same way multi-entity management is today. <strong>During early access, the margin is waived in full.</strong></p>
+                <p class="body"><strong class="product">Treasury</strong> runs on a flat, disclosed margin, the same for every customer, not tiered by plan. It's available as an add-on alongside Additional entities, the same way multi-entity management is today. <strong>Because you're already a Payhawk customer, you're getting this before it's generally available, and the margin is waived in full while you do.</strong></p>
             </div>
         </section>
 
