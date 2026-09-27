@@ -1,2 +1,5 @@
+# Crawling is allowed on purpose so search engines can read the noindex
+# directives (meta tag + X-Robots-Tag header). A Disallow here would stop
+# them seeing noindex, and the bare URL could still be listed if linked.
 User-agent: *
-Disallow: /
+Allow: /
